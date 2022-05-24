@@ -9,7 +9,7 @@
         @foreach ($products as $key => $product)
             <div class="card">
                 <div class="card-img">
-                    <img src="{{ asset('storage/uploads/products/' . $product->image) }}" alt="">
+                    <img src="{{ $product->image }}" alt="">
                 </div>
                 <div class="card-body">
                     <h3>{{ $product->name }}</h3>

@@ -27,7 +27,7 @@
                         <tr>
                             <td class="center">{{ $count }}</td>
                             <td class="center">
-                                <img src="{{ asset('storage/uploads/products/' . $order->product->image) }}" alt="">  
+                                <img src="{{ $order->product->image }}" alt="">  
                             </td>
                             <td>{{ $order->product->name }}</td>
                             <td class="center">{{ $order->quantity }}</td>

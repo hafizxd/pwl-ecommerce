@@ -28,7 +28,7 @@
                             <td>{{ $order->user->name }}</td>
                             <td>
                                 @if(isset($order->product->image))
-                                    <img src="{{ asset('storage/uploads/products/' . $order->product->image) }}" alt="" style="width:100px;">
+                                    <img src="{{ $order->product->image }}" alt="" style="width:100px;">
                                 @endif
                                 {{ $order->product->name }}
                             </td>

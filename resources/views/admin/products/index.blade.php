@@ -28,7 +28,7 @@
                             <td>{{ $count }}</td>
                             <td>
                                 @if(isset($product->image))
-                                    <img src="{{ asset('storage/uploads/products/' . $product->image) }}" alt="" style="width:100px;">
+                                    <img src="{{ $product->image }}" alt="" style="width:100px;">
                                 @endif
                             </td>
                             <td>{{ $product->name }}</td>
