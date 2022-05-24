@@ -28,7 +28,7 @@ class ProductController extends Controller
         ]);
 
         $fileName = $request->image->hashName();
-        Storage::disk(config('filesystems.default'))->putFileAs('uploads/products', $request->image, $fileName);
+        $request->file('image')->storeAs('public/uploads/products' , $fileName);
 
         Product::create([
             'name' => $request->name,
@@ -58,7 +58,7 @@ class ProductController extends Controller
 
         if (isset($request->image)) {
             $fileName = $request->image->hashName();
-            Storage::disk(config('filesystems.default'))->putFileAs('uploads/products', $request->image, $fileName);
+            $request->file('image')->storeAs('public/uploads/products' , $fileName);
         } else {
             $fileName = $product->image;
         }
